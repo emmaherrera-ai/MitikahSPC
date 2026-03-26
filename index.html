@@ -40,6 +40,13 @@
             background-position: center;
         }
 
+        #ubicacion {
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
         .service-card:hover {
             transform: translateY(-5px);
             transition: all 0.3s ease;
@@ -67,11 +74,12 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-palacioYellow rounded-sm flex items-center justify-center font-bold text-black text-xs">W</div>
-                <span class="text-white font-bold tracking-widest text-xl">WEHELP Mitikah</span>
+                <span class="text-white font-bold tracking-widest text-xl">WEHELP - Mitikah</span>
             </div>
             <div class="hidden md:flex gap-8 text-white/80 text-sm font-semibold tracking-wider">
                 <a href="#servicios" class="hover:text-palacioYellow transition">SERVICIOS</a>
                 <a href="#tuning" class="hover:text-palacioYellow transition">TUNING</a>
+                <a href="#ubicacion" class="hover:text-palacioYellow transition">UBICACIÓN</a>
                 <a href="#faq" class="hover:text-palacioYellow transition">FAQ</a>
             </div>
             <a href="https://wa.me/5576090747" class="bg-palacioYellow text-black px-5 py-2 rounded-full font-bold text-xs tracking-tighter hover:bg-white transition">
@@ -83,10 +91,10 @@
     <!-- Hero Section -->
     <header class="hero-gradient h-screen flex items-center justify-center text-center text-white px-6">
         <div class="max-w-4xl">
-            <h2 class="text-palacioYellow font-bold tracking-[0.3em] text-sm mb-4">SOLUCIONES PALACIO TECNOLOGÍA</h2>
-            <h1 class="font-serif text-6xl md:text-8xl mb-8 leading-tight">Especialistas IT para tu día a día.</h1>
+            <h2 class="text-palacioYellow font-bold tracking-[0.3em] text-sm mb-4 uppercase">Soluciones Palacio Tecnología</h2>
+            <h1 class="font-serif text-6xl md:text-8xl mb-8 leading-tight">Tu tecnología, evolucionada.</h1>
             <p class="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
-                Optimización, protección y soporte técnico directamente en el corazón de El Palacio de Hierro Nuevo Coyoacán.
+                Optimización, protección y soporte técnico directamente en el corazón de El Palacio de Hierro Nuevo Coyoacán "Mitikah".
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#servicios" class="border border-white/30 hover:border-palacioYellow px-8 py-4 rounded-full transition">Explorar Servicios</a>
@@ -100,7 +108,7 @@
     <!-- Marcas -->
     <section class="py-12 bg-luxuryBlack border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 overflow-hidden">
-            <p class="text-center text-white/40 text-xs font-bold tracking-widest mb-8">ESPECIALISTAS EN MARCAS LÍDERES</p>
+            <p class="text-center text-white/40 text-xs font-bold tracking-widest mb-8 uppercase">Especialistas en marcas líderes</p>
             <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
                 <span class="text-white font-bold text-2xl">APPLE</span>
                 <span class="text-white font-bold text-2xl">ASUS ROG</span>
@@ -113,55 +121,54 @@
     </section>
 
     <!-- Servicios -->
-    <section id="servicios" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+    <section id="servicios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-12 md:mb-16">
             <h2 class="font-serif text-4xl md:text-5xl mb-4">Servicios Premium</h2>
             <div class="w-20 h-1 bg-palacioYellow mx-auto"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <!-- Servicio 1: PC de Autor -->
-            <div class="service-card p-8 bg-luxuryBlack text-white rounded-2xl border-t-4 border-palacioYellow">
+            <div class="service-card flex flex-col p-8 bg-luxuryBlack text-white rounded-2xl border-t-4 border-palacioYellow h-full">
                 <i class="fas fa-desktop text-4xl text-palacioYellow mb-6"></i>
                 <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">PC de Autor</h3>
-                <p class="text-white/60 mb-6 font-light text-sm">Diseño y ensamble desde cero. Tú eliges procesador, motherboard y componentes; nosotros creamos la obra maestra.</p>
-                <ul class="text-xs space-y-2 text-white/40">
+                <p class="text-white/60 mb-6 font-light text-sm flex-grow">Diseño y ensamble desde cero. Tú eliges procesador, motherboard y componentes; nosotros creamos la obra maestra.</p>
+                <ul class="text-xs space-y-2 text-white/40 mt-auto">
                     <li><i class="fas fa-check text-palacioYellow mr-2"></i> Selección pieza a pieza</li>
                     <li><i class="fas fa-check text-palacioYellow mr-2"></i> Ensamble artesanal</li>
                 </ul>
             </div>
-            
-            <!-- Servicio 1 -->
-            <div class="service-card p-10 bg-luxuryBlack text-white rounded-2xl">
+
+            <!-- Servicio 2: Protección Total -->
+            <div class="service-card flex flex-col p-8 bg-luxuryBlack text-white rounded-2xl h-full">
                 <i class="fas fa-shield-halved text-4xl text-palacioYellow mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Protección Total</h3>
-                <p class="text-white/60 mb-6 font-light">Micas de Hidrogel y Cristal templado de última generación para smartphones, tablets y smartwatches.</p>
-                <ul class="text-sm space-y-2 text-white/40">
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Protección Total</h3>
+                <p class="text-white/60 mb-6 font-light text-sm flex-grow">Micas de Hidrogel y Cristal templado de última generación para todos tus dispositivos móviles.</p>
+                <ul class="text-xs space-y-2 text-white/40 mt-auto">
                     <li><i class="fas fa-check text-palacioYellow mr-2"></i> Corte milimétrico</li>
-                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Resistencia a impactos</li>
+                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Resistencia grado militar</li>
                 </ul>
             </div>
 
-            <!-- Servicio 2 -->
-            <div class="service-card p-10 bg-luxuryBlack text-white rounded-2xl border-2 border-palacioYellow/20">
+            <!-- Servicio 3: Diagnosis & Repair -->
+            <div class="service-card flex flex-col p-8 bg-luxuryBlack text-white rounded-2xl border-2 border-palacioYellow/20 h-full">
                 <i class="fas fa-microchip text-4xl text-palacioYellow mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Diagnóstico & Reparación</h3>
-                <p class="text-white/60 mb-6 font-light">Diagnóstico especializado y cambio de componentes (baterías, ram, teclados) para tus dispositivos.</p>
-                <ul class="text-sm space-y-2 text-white/40">
-                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Refacciones de alta gamma</li>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Diagnóstico y Reparación</h3>
+                <p class="text-white/60 mb-6 font-light text-sm flex-grow">Diagnóstico especializado y cambio de componentes con refacciones de la más alta gama del mercado.</p>
+                <ul class="text-xs space-y-2 text-white/40 mt-auto">
+                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Soporte multimarca</li>
                     <li><i class="fas fa-check text-palacioYellow mr-2"></i> Garantía WeHelp</li>
                 </ul>
             </div>
 
-            <!-- Servicio 3 -->
-            <div class="service-card p-10 bg-luxuryBlack text-white rounded-2xl">
+            <!-- Servicio 4: Licenciamiento -->
+            <div class="service-card flex flex-col p-8 bg-luxuryBlack text-white rounded-2xl h-full">
                 <i class="fas fa-key text-4xl text-palacioYellow mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Licenciamiento</h3>
-                <p class="text-white/60 mb-6 font-light">Software original. Microsoft M365 y Antivirus Kaspersky Plus con soporte de instalación incluido.</p>
-                <ul class="text-sm space-y-2 text-white/40">
-                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Llaves legítimas</li>
-                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Soporte post-venta</li>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Licenciamiento</h3>
+                <p class="text-white/60 mb-6 font-light text-sm flex-grow">Software original Microsoft M365 y Antivirus Kaspersky Plus. Instalación y soporte técnico incluido.</p>
+                <ul class="text-xs space-y-2 text-white/40 mt-auto">
+                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Llaves 100% legales</li>
+                    <li><i class="fas fa-check text-palacioYellow mr-2"></i> Activación inmediata</li>
                 </ul>
             </div>
         </div>
@@ -174,7 +181,7 @@
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-palacioYellow/20 blur-3xl"></div>
                 <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">Potencia sin límites: Tuning & Optimización</h2>
                 <p class="text-white/70 text-lg mb-8 font-light">
-                    No solo reparamos, llevamos tu equipo a su máximo potencial. Especialistas en mejorar la arquitectura interna de tu hardware.
+                    No solo reparamos, llevamos tu equipo a su máximo potencial. Especialistas en mejorar la arquitectura interna de tu hardware para un rendimiento superior.
                 </p>
                 <div class="grid grid-cols-2 gap-6 mb-10">
                     <div class="border-l-2 border-palacioYellow pl-4">
@@ -191,10 +198,10 @@
                     </div>
                     <div class="border-l-2 border-palacioYellow pl-4">
                         <h4 class="font-bold text-palacioYellow">OPTIMIZACIÓN</h4>
-                        <p class="text-sm text-white/50">Limpieza y ajuste fino de sistema.</p>
+                        <p class="text-sm text-white/50">Limpieza profunda y ajuste de sistema.</p>
                     </div>
                 </div>
-                <a href="https://wa.me/5576090747" class="inline-block bg-palacioYellow text-black font-bold px-10 py-4 rounded-full">COTIZAR UPGRADE</a>
+                <a href="https://wa.me/5576090747" class="inline-block bg-palacioYellow text-black font-bold px-10 py-4 rounded-full hover:bg-white transition uppercase text-sm tracking-widest">Cotizar Upgrade</a>
             </div>
             <div class="relative flex justify-center">
                 <!-- Visual abstract of high-end PC parts -->
@@ -257,75 +264,71 @@
                 <!-- Q1 -->
                 <div class="faq-item border border-luxuryBlack/10 rounded-xl p-6 cursor-pointer hover:bg-palacioYellow/5 transition">
                     <div class="flex justify-between items-center" onclick="toggleFaq(this)">
-                        <h3 class="font-bold">¿Cuánto tiempo toma el cambio de mica?</h3>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">¿Cuánto tiempo toma el cambio de mica?</h3>
                         <i class="fas fa-chevron-down text-sm transition-transform"></i>
                     </div>
                     <div class="faq-answer">
-                        <p class="pt-4 text-luxuryBlack/60 text-sm">Nuestro proceso de aplicación de Hidrogel o Cristal templado toma aproximadamente entre 5 y 10 minutos, garantizando una alineación perfecta y sin burbujas.</p>
+                        <p class="pt-4 text-luxuryBlack/60 text-sm font-light">Nuestro proceso de aplicación toma aproximadamente entre 5 y 10 minutos, garantizando una alineación perfecta sin burbujas.</p>
                     </div>
                 </div>
 
                 <!-- Q2 -->
                 <div class="faq-item border border-luxuryBlack/10 rounded-xl p-6 cursor-pointer hover:bg-palacioYellow/5 transition">
                     <div class="flex justify-between items-center" onclick="toggleFaq(this)">
-                        <h3 class="font-bold">¿El software que instalan es original?</h3>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">¿El software es realmente original?</h3>
                         <i class="fas fa-chevron-down text-sm transition-transform"></i>
                     </div>
                     <div class="faq-answer">
-                        <p class="pt-4 text-luxuryBlack/60 text-sm">Absolutamente. En WeHelp solo manejamos licenciamiento legítimas de Microsoft y Kaspersky. Recibirás tus claves de acceso y llave de activación correspondiente.</p>
+                        <p class="pt-4 text-luxuryBlack/60 text-sm font-light">Absolutamente. En WeHelp solo manejamos licenciamiento legítimo de Microsoft y Kaspersky con llaves de activación genuinas.</p>
                     </div>
                 </div>
 
                 <!-- Q3 -->
                 <div class="faq-item border border-luxuryBlack/10 rounded-xl p-6 cursor-pointer hover:bg-palacioYellow/5 transition">
                     <div class="flex justify-between items-center" onclick="toggleFaq(this)">
-                        <h3 class="font-bold">¿Qué equipos atienden?</h3>
+                        <h3 class="font-bold uppercase text-sm tracking-widest">¿Atienden equipos fuera de garantía?</h3>
                         <i class="fas fa-chevron-down text-sm transition-transform"></i>
                     </div>
                     <div class="faq-answer">
-                        <p class="pt-4 text-luxuryBlack/60 text-sm">Somos especialistas en MacBook, laptops gamming de marcas como ASUS ROG, MSI, Alienware, así como dispositivos móviles.</p>
+                        <p class="pt-4 text-luxuryBlack/60 text-sm font-light">Sí, realizamos diagnósticos y reparaciones tanto para equipos en garantía como para aquellos fuera de ella, utilizando componentes certificados.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contacto -->
+    <!-- Footer -->
     <footer class="bg-luxuryBlack text-white py-20 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div class="col-span-2">
                 <div class="flex items-center gap-2 mb-6">
                     <div class="w-8 h-8 bg-palacioYellow rounded-sm flex items-center justify-center font-bold text-black text-xs">W</div>
-                    <span class="text-white font-bold tracking-widest text-2xl">WEHELP Mitikah</span>
+                    <span class="text-white font-bold tracking-widest text-2xl uppercase">WeHelp</span>
                 </div>
                 <p class="text-white/50 max-w-md font-light mb-8">
-                    Elevamos el estándar de soporte IT. Ubicados dentro de la sección de Tecnología de El Palacio de Hierro, combinamos la exclusividad del servicio con la máxima capacidad técnica.
-                </p>
-                <p class="text-white/50 max-w-md font-light mb-8">
-                    Contáctanos por WhatsApp al 55-7609-0747
+                    Elevamos el estándar de soporte IT en México. Ubicados dentro de El Palacio de Hierro, combinamos exclusividad con la máxima capacidad técnica.
                 </p>
             </div>
             
             <div>
-                <h4 class="font-bold mb-6 text-palacioYellow">LOCALIZACIÓN</h4>
+                <h4 class="font-bold mb-6 text-palacioYellow uppercase text-xs tracking-[0.2em]">Localización</h4>
                 <p class="text-white/50 text-sm leading-relaxed">
-                    Módulo de Tecnología Mitikah<br>
-                    El Palacio de Hierro Nuevo Coyoacán<br>
-                    CDMX / Área Metropolitana
+                    Palacio de Hierro Mitikah<br>
+                    2do Piso (Tecnología)<br>
+                    CDMX, México.
                 </p>
             </div>
 
             <div>
-                <h4 class="font-bold mb-6 text-palacioYellow">SOPORTE</h4>
+                <h4 class="font-bold mb-6 text-palacioYellow uppercase text-xs tracking-[0.2em]">Soporte</h4>
                 <ul class="text-white/50 text-sm space-y-4">
-                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Agendar Diagnóstico</a></li>
-                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Consulta vía WhatsApp</a></li>
-                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Servicios Corporativos</a></li>
+                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Consultar IT Specialist</a></li>
+                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Agendar PC de Autor</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/10 text-center text-white/30 text-xs">
-            <p>© 2026 WeHelp Mitikah - Soluciones Palacio Tecnología. Todos los derechos reservados.</p>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/10 text-center text-white/30 text-[10px] tracking-widest">
+            <p>© 2026 WEHELP - SOLUCIONES PALACIO TECNOLOGÍA. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>
     </footer>
 

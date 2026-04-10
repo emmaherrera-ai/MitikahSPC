@@ -101,7 +101,9 @@
                 <a href="#ubicacion" class="hover:text-palacioYellow transition">UBICACIÓN</a>
                 <a href="#faq" class="hover:text-palacioYellow transition">FAQ</a>
             </div>
-            <a href="https://wa.me/5576090747" class="hidden md:inline-flex bg-palacioYellow text-black px-5 py-2 rounded-full font-bold text-xs tracking-tighter hover:bg-white transition">
+            <a href="javascript:void(0);" 
+               onclick="openPrivacyModal('https://wa.me/5576090747')" 
+               class="hidden md:inline-flex bg-palacioYellow text-black px-5 py-2 rounded-full font-bold text-xs tracking-tighter hover:bg-white transition">
                 CONTACTAR EXPERTO
             </a>
         </div>
@@ -378,8 +380,9 @@
             <div>
                 <h4 class="font-bold mb-6 text-palacioYellow uppercase text-xs tracking-[0.2em]">Soporte</h4>
                 <ul class="text-white/50 text-sm space-y-4">
-                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Consultar IT Specialist</a></li>
-                    <li><a href="https://wa.me/5576090747" class="hover:text-white transition">Agendar PC de Autor</a></li>
+                    <a href="javascript:void(0);" onclick="openPrivacyModal('https://wa.me/5576090747')" class="hover:text-white transition">
+                        Consultar IT Specialist
+                    </a>
                 </ul>
             </div>
         </div>
@@ -391,9 +394,54 @@
     </footer>
 
     <!-- Botón WhatsApp Flotante -->
-    <a id="whatsappBtn" href="https://wa.me/5576090747" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 hover:scale-110 transition" transition-opacity duration-500">
+    <a id="whatsappBtn" 
+       href="javascript:void(0);" 
+       onclick="openPrivacyModal('https://wa.me/5576090747')" 
+       class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 hover:scale-110 transition opacity-0 pointer-events-none">
+        
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Modal Aviso de Privacidad -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+      <div class="bg-white rounded-2xl p-6 max-w-md w-full text-center">
+        <h2 class="text-xl font-bold mb-4">Aviso de Privacidad</h2>
+        <p class="text-sm mb-4">
+          Antes de continuar, debes aceptar nuestro aviso de privacidad.
+        </p>
+        <a href="https://bit.ly/42XusAo" target="_blank" class="text-blue-600 underline text-sm block mb-4">
+          Ver aviso de privacidad
+        </a>
+    
+        <div class="flex justify-center gap-3">
+          <button onclick="closeModal()" class="px-4 py-2 rounded-lg border">
+            Cancelar
+          </button>
+          <button onclick="acceptPrivacy()" class="px-4 py-2 bg-palacio text-black rounded-lg font-semibold">
+            Aceptar y continuar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    let whatsappLink = "";
+    
+    function openPrivacyModal(link) {
+      whatsappLink = link;
+      document.getElementById("privacyModal").classList.remove("hidden");
+      document.getElementById("privacyModal").classList.add("flex");
+    }
+    
+    function closeModal() {
+      document.getElementById("privacyModal").classList.add("hidden");
+    }
+    
+    function acceptPrivacy() {
+      window.open(whatsappLink, "_blank");
+      closeModal();
+    }
+    </script>
 
     <script>
         function toggleFaq(element) {

@@ -446,17 +446,17 @@
     
     function acceptPrivacy() {
 
-      // Evento Google Analytics
-      if (typeof gtag === "function") {
-        gtag('event', 'click_whatsapp', {
-          event_category: 'conversion',
-          event_label: 'whatsapp_contacto'
-        });
-      }
-    
-      window.open(whatsappLink, "_blank");
-      closeModal();
-    }
+          gtag('event', 'click_whatsapp', {
+            event_category: 'conversion',
+            event_label: 'whatsapp_contacto'
+          });
+        
+          setTimeout(() => {
+            window.open(whatsappLink, "_blank");
+          }, 500); // 👈 clave
+        
+          closeModal();
+        }
     </script>
 
     <script>

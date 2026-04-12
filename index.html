@@ -86,6 +86,16 @@
               animation-play-state: paused;
             }
     </style>
+
+    <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-SQD9PEEPVE');
+        </script>
 </head>
 <body class="bg-white text-luxuryBlack font-sans">
 
@@ -435,6 +445,15 @@
     }
     
     function acceptPrivacy() {
+
+      // Evento Google Analytics
+      if (typeof gtag === "function") {
+        gtag('event', 'click_whatsapp', {
+          event_category: 'conversion',
+          event_label: 'whatsapp_contacto'
+        });
+      }
+    
       window.open(whatsappLink, "_blank");
       closeModal();
     }
